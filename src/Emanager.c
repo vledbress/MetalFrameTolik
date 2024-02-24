@@ -1,12 +1,27 @@
-#include "Emanager.h"
+#include "../inc/Emanager.h"
 
 void FillEnemyArr(SDL_Renderer *r, Person *n[ENEMYCOUNT])
 {
     for(int i = 0;i<ENEMYCOUNT;i++){
-        n[i] = CreatePerson(r,TILESIZE*(i+2),TILESIZE,TILESIZE,TILESIZE,"images/vrag.png");
+        n[i] = CreatePerson(r,TILESIZE*(i+2),TILESIZE,TILESIZE,TILESIZE,"resource/images/vrag.png");
         n[i]->stats.armor = 0;
     }
 }
+
+// Person *CreateEnemy(SDL_Renderer *r, enemy_t e) {
+//     Person *res = NULL;
+//     switch (e) {
+//         case 1: res = CreatePerson(r,0,0,TILESIZE,TILESIZE,"images/vrag1.png"); SetFullStats(res, 5, 5, 5, 5); break;
+//         case 2: res = CreatePerson(r,0,0,TILESIZE,TILESIZE,"images/vrag2.png"); SetFullStats(res, 5, 5, 5, 5); break;
+//         case 3: res = CreatePerson(r,0,0,TILESIZE,TILESIZE,"images/vrag3.png"); SetFullStats(res, 5, 5, 5, 5); break;
+//         case 4: res = CreatePerson(r,0,0,TILESIZE,TILESIZE,"images/vrag4.png"); SetFullStats(res, 5, 5, 5, 5); break;
+//         case 5: res = CreatePerson(r,0,0,TILESIZE,TILESIZE,"images/vrag5.png"); SetFullStats(res, 5, 5, 5, 5); break;
+//         case 6: res = CreatePerson(r,0,0,TILESIZE,TILESIZE,"images/vrag6.png"); SetFullStats(res, 5, 5, 5, 5); break;
+//         default: res = NULL; break;
+//     }
+//     return res;
+// }
+
 
 void ShowEnemyArr(SDL_Renderer *r, Person *n[ENEMYCOUNT])
 {
